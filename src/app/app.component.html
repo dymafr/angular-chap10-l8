@@ -2,7 +2,7 @@
 	<nav>
 		<ul>
 			<li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Homepage</li>
-			<li routerLink="/users" routerLinkActive="active">Users</li>
+			<li routerLink="/users" [queryParams]="{details: true}" routerLinkActive="active">Users</li>
 		</ul>
 	</nav>
 	<div>
