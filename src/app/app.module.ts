@@ -9,8 +9,11 @@ import { UserComponent } from "./user/user.component";
 
 const APP_ROUTES: Routes = [
   { path: "", component: HomepageComponent },
-  { path: "users", component: UsersComponent },
-  { path: "users/:id", component: UserComponent }
+  {
+    path: "users",
+    component: UsersComponent,
+    children: [{ path: ":id", component: UserComponent }]
+  }
 ];
 
 @NgModule({
